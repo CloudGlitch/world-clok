@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clok</title>
+    <style>
+        h1 {
+            font-family: courier;
+            font-size: 60px;
+        }
+        .clock {
+            font-family: courier;
+            font-size: 16px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 25px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+            width:60%;        }
+    </style>
+</head>
+<body><center>
+    <h1>WORLD CLOK</h1><br><br>
+    
+    <div class="clock"><br><br>
+        <!-- Los Angeles -->
+        <p>Los Angeles: <span id="los-angeles"></span></p>
+        <!-- New York -->
+        <p>New York: <span id="new-york"></span></p>
+        <!-- London -->
+        <p>London: <span id="london"></span></p>
+        <!-- Berlin -->
+        <p>Berlin: <span id="berlin"></span></p>
+        <!-- Kolkata -->
+        <p>Kolkata: <span id="kolkata"></span></p>
+        <!-- Hong Kong -->
+        <p>Hong Kong: <span id="hong-kong"></span></p>
+        <!-- Tokyo -->
+        <p>Tokyo: <span id="tokyo"></span></p>
+        <!-- Sydney -->
+        <p>Sydney: <span id="sydney"></span></p>
+        <!-- South Africa -->
+        <p>South Africa: <span id="south-africa"></span></p>
+        <!-- Amsterdam -->
+        <p>Amsterdam: <span id="amsterdam"></span></p>
+        <!-- Kuwait -->
+        <p>Kuwait: <span id="kuwait"></span></p><br><br>
+    </div>
+</center>
+    <script>
+        function updateClocks() {
+            const losAngelesTime = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+            document.getElementById('los-angeles').textContent = losAngelesTime;
+
+            const newYorkTime = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' });
+            document.getElementById('new-york').textContent = newYorkTime;
+
+            const londonTime = new Date().toLocaleString('en-GB', { timeZone: 'Europe/London' });
+            document.getElementById('london').textContent = londonTime;
+
+            const berlinTime = new Date().toLocaleString('en-DE', { timeZone: 'Europe/Berlin' });
+            document.getElementById('berlin').textContent = berlinTime;
+
+            const kolkataTime = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+            document.getElementById('kolkata').textContent = kolkataTime;
+
+            const hongKongTime = new Date().toLocaleString('en-HK', { timeZone: 'Asia/Hong_Kong' });
+            document.getElementById('hong-kong').textContent = hongKongTime;
+
+            const tokyoTime = new Date().toLocaleString('en-JP', { timeZone: 'Asia/Tokyo' });
+            document.getElementById('tokyo').textContent = tokyoTime;
+
+            const sydneyTime = new Date().toLocaleString('en-AU', { timeZone: 'Australia/Sydney' });
+            document.getElementById('sydney').textContent = sydneyTime;
+
+            const southAfricaTime = new Date().toLocaleString('en-ZA', { timeZone: 'Africa/Johannesburg' });
+            document.getElementById('south-africa').textContent = southAfricaTime;
+
+            const amsterdamTime = new Date().toLocaleString('en-NL', { timeZone: 'Europe/Amsterdam' });
+            document.getElementById('amsterdam').textContent = amsterdamTime;
+
+            const kuwaitTime = new Date().toLocaleString('en-KW', { timeZone: 'Asia/Kuwait' });
+            document.getElementById('kuwait').textContent = kuwaitTime;
+        }
+
+        // Update clocks every second
+        setInterval(updateClocks, 1000);
+        updateClocks(); // Initial update
+    </script>
+</body>
+</html>
